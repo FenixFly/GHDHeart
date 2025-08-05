@@ -17,8 +17,15 @@ When dealing with cardiac scanned data (MRI, CT, ultrasound, etc.), reconstructi
 ### 1. Install Dependencies
 
 ```bash
-conda create -n GHDHeart
+sudo apt install build-essential
+conda create -n GHDHeart python=3.9
 conda activate GHDHeart
+
+
+conda install pytorch==2.0.1 torchvision==0.15.2 pytorch-cuda=11.8 pytorch3d==0.7.4 fvcore -c pytorch -c nvidia -c pytorch3d -c conda-forge
+pip install torch-scatter -f https://data.pyg.org/whl/torch-2.0.1+cu118.html
+
+
 pip install -r requirements.txt
 ```
 ### 2. Quick Start
